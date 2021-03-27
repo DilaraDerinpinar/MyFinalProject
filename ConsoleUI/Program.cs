@@ -12,15 +12,15 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             //ProductManager productManager=new ProductManager(new IProductDal());
-            //ProductTest();
+            ProductTest();
             //CategoryTest();
 
-            ProductManager productManager = new ProductManager(new EfProductDal());
-            foreach(var item in productManager.GetProductDetails())
-            {
-                Console.WriteLine($"{item.CategoryName} ------ {item.ProductName}");
-                //iki tablodan dataları joinleyip getirdik
-            }
+            //ProductManager productManager = new ProductManager(new EfProductDal());
+            //foreach(var item in productManager.GetProductDetails().Data)
+            //{
+            //    Console.WriteLine($"{item.CategoryName} ------ {item.ProductName}");
+            //    //iki tablodan dataları joinleyip getirdik
+            //}
 
             Console.ReadLine();
         }
@@ -38,10 +38,22 @@ namespace ConsoleUI
         {
             ProductManager productManager = new ProductManager(new EfProductDal());
 
-            foreach (var item in productManager.GetProductDetails())
+            var result = productManager.GetProductDetails();
+
+            if(result.Success==true)
             {
-                Console.WriteLine(item.ProductName + "/" + item.CategoryName);
+                foreach (var product in result.Data)
+                {
+                    Console.WriteLine(product.ProductName + "/" + product.CategoryName);
+                }
             }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+
+
+            
         }
     }
 }
