@@ -12,7 +12,7 @@ namespace Core.DataAccess.EntityFramework
                 where TEntity:class,IEntity,new()
                 where TContext:DbContext,new()
     {
-        //EntityFramework ü kullanarak repository olusturcaz
+        //EntityFramework ü kullanarak repository base i  olusturcaz
 
         public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {

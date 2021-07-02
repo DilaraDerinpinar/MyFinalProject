@@ -36,7 +36,7 @@ namespace Business.Concrete
             //bir iş sınıfı başka sınıfları new lemez onun yerine üstteki şekildeki gibi
             //constructor injection yapıyoruz.
 
-            if(DateTime.Now.Hour==22)
+            if (DateTime.Now.Hour == 16)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);//maintenance time bakım zamanı demek
             }

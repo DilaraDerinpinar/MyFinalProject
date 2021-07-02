@@ -7,6 +7,7 @@ namespace Business.Constants
 {
     public static class Messages
     {
+        //Constant sabit demektir. Burada northwinde özel proje sabitleri bulunur
         public static string ProductAdded = "Ürün eklendi";
         public static string ProductNameInvalid = "Ürün ismi geçersiz";
         internal static string MaintenanceTime = "Sistem bakımda";

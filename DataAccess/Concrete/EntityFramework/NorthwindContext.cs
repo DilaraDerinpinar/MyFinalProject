@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //projenin hangi db ile ilişkili oldugunun belirtildiği alandır.
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-GFCEB34;Database=Northwind;Trusted_Connection=true");
 
         }
 
