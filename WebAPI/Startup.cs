@@ -34,8 +34,8 @@ namespace WebAPI
             services.AddControllers();
             //singleton : uygulama ilk ayaða kalktýðý anda, servisin tek bir instance’ý oluþturularak memory’de 
             //tutulur ve daha sonrasýnda her servis çaðrýsýnda bu instance gönderilir. Ancak içerisinde parametre olmamasý lazým.
-            services.AddSingleton<IProductService, ProductManager>();
-            services.AddSingleton<IProductDal, EfProductDal>();
+            //services.AddSingleton<IProductService, ProductManager>();
+            //services.AddSingleton<IProductDal, EfProductDal>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
